@@ -1,0 +1,120 @@
+Concept Questions:
+
+1. What type would you choose for the following “numbers”?
+
+A person’s telephone number
+string
+
+A person’s height
+double
+
+A person’s age
+int
+
+A person’s gender (Male, Female, Prefer Not To Answer)
+enum Gender 
+{
+    Male,
+    Female, 
+    PreferNotToAnswer
+}
+
+A person’s salary
+double
+
+A book’s ISBN
+string
+
+A book’s price
+double
+
+A book’s shipping weight
+double
+
+A country’s population
+long
+
+The number of stars in the universe
+long
+
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business)
+int
+
+
+
+2. What are the difference between value type and reference type variables?
+
+value type
+int, long, float, char, bool, enum, struct
+stores data value within its own memory space
+store data on the stack
+allocated memory at the time of declaration
+when a value type variable is assigned to another variable or passed as a parameter, a copy of its value is made
+non-nullable
+
+reference type
+string, class, interface, int[], string[]
+stores the address where the value is being stored
+store data on the heap
+allocated memory at runtime
+when a reference type variable is assigned to another variable or passed as a parameter, a copy of its reference is made
+nullable
+
+
+
+3. What happens when you divide an int variable by 0?
+runtime exception of type System.DivideByZeroException
+
+
+
+4. What happens when you divide a double variable by 0?
+∞
+or
+-∞
+depend on the signs of  the double variable
+
+
+
+5. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+
+No overflow exception for int
+the value wraps around to the opposite end of the range
+-2,147,483,648 to 2,147,483,647
+
+
+
+6. What is the difference between x = y++; and x = ++y;?
+
+x = y++
+assigns the value of y to x and then increments y
+
+x = ++y
+increments y and then assigns the new value to x
+
+
+
+7. What is the difference between break, continue, and return when used inside a loop
+statement?
+
+break
+Terminates the loop and jumps to the statement following the loop
+
+continue
+Skips the current iteration of the loop and jumps to the next iteration.
+
+return
+Exits the entire function or method that the loop is contained in, not just the loop itself
+
+
+
+8. What are the three parts of a for statement and which of them are required?
+
+Initialization
+Condition
+Iteration
+All three parts are required
+for (int i = 0; i < n; i++) {}
+
+LeetCode Questions Numbers to do: 1, 9, 217, 412
