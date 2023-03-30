@@ -1,0 +1,176 @@
+1. What are the six combinations of access modifier keywords and what do they do? 
+
+public: anywhere in the program.
+
+private: the same class or struct where it is declared.
+
+protected: Twithin the same class and any derived classes.
+
+internal: inside the same assembly
+
+protected internal: inside the same assembly and any derived classes
+
+private protected: in the same class and any derived classes that are defined within the same assembly as the declaring class
+
+
+
+2. What is the difference between the static, const, and readonly keywords when applied to a type member?
+
+static: member belongs to the class itself, not to any instance of class. you can access a static member without creating an instance of the type first. typically used when it is relevant to all instances of a type.
+
+const: it is a compile-time constant that cannot be changed. The value of a const member is determined at compile time and is embedded directly into the code that uses it.
+
+readonly: it can be assigned a value only once, at initialization or in a constructor, and cannot be changed after. the value of it is determined during runtime. 
+
+
+
+3. What does a constructor do?
+
+called when an object is created from a class. to initialize the object
+can take parameters to allow the caller to provide initial values
+can be overloaded to provide multiple ways of initializing an object
+
+
+
+4. Why is the partial keyword useful?
+
+partial keyword is used to define a class, struct, or interface in multiple source code files. you can split the definition of a type across multiple files, making it easier to organize and manage large codebases
+
+
+
+5. What is a tuple?
+
+a tuple is a data structure that groups together a fixed number of related values, of potentially different types, into a single object
+
+(double, int) t1 = (4.5, 3);
+
+
+
+6. What does the C# record keyword do?
+
+When you declare a record, the compiler automatically generates :
+
+A constructor that initializes all of the record's properties based on the order in which they are declared.
+Getter methods for all of the record's properties.
+An Equals method that compares two records based on their property values.
+A GetHashCode method that returns a hash code for the record based on its property values.
+A ToString method that returns a string representation of the record, including the names and values of all of its properties.
+
+
+
+7. What does overloading and overriding mean?
+
+Overloading refers to defining multiple methods or constructors in the same class with the same name, but different parameters.
+
+Overriding refers to providing a new implementation for a method that already exists in a base class
+
+
+
+8. What is the difference between a field and a property?
+
+A field is a variable that is declared within a class or struct and is used to store data. Fields can be either public, private, protected, or internal
+
+A property is a method-like member that provides access to a private field. A property is defined with a get accessor to read its value and a set accessor to write its value
+
+public string Name { get; set; }
+
+
+
+9. How do you make a method parameter optional?
+
+you can make a method parameter optional by assigning a default value to it. if the caller doesn't provide a value for the parameter, the default value will be used instead
+
+public void Method(int x, string y = "default string")
+
+
+
+10. What is an interface and how is it different from abstract class?
+
+an interface is a contract that defines a set of related methods, properties that a class or struct can implement. An interface defines these members, but it doesn't provide any implementation details. A class or struct that implements an interface must provide implementations for all of the members defined by the interface.
+
+an abstract class can provide some implementation details.
+
+a class can implement multiple interfaces, but it can only inherit from one abstract class
+
+
+
+11. What accessibility level are members of an interface?
+
+All members of an interface are public, regardless of whether they are declared as public
+
+
+
+12. True/False. Polymorphism allows derived classes to provide different implementations of the same method.
+
+T
+
+13. True/False. The override keyword is used to indicate that a method in a derived class is providing its own implementation of a method.
+
+T
+
+14. True/False. The new keyword is used to indicate that a method in a derived class is providing its own implementation of a method.
+
+T Method Hiding  it is not overriding
+
+15. True/False. Abstract methods can be used in a normal (non-abstract) class. 
+
+F
+
+16.True/False. Normal (non-abstract) methods can be used in an abstract class. 
+
+T
+
+17. True/False. Derived classes can override methods that were virtual in the base class. 
+
+T
+
+18. True/False. Derived classes can override methods that were abstract in the base class. 
+
+T
+
+19. True/False. In a derived class, you can override a method that was neither virtual nor abstract in the base class.
+
+F However, you can still use the new keyword, but this will not override 
+
+20. True/False. A class that implements an interface does not have to provide an implementation for all of the members of the interface.
+
+F
+
+21. True/False. A class that implements an interface is allowed to have other members that aren’t defined in the interface.
+
+T
+
+22. True/False. A class can have more than one base class.
+
+F
+
+23. True/False. A class can implement more than one interface.
+
+T
+
+interface I1 { void Method1(); }
+interface I2 { void Method2(); }
+
+class MyClass : I1, I2
+{
+    public void Method1() { Console.WriteLine("Implementation of Method1"); }
+    public void Method2() { Console.WriteLine("Implementation of Method2"); }
+}
+
+
+
+24. What is meant by the terms managed resource and unmanaged resource in .NET
+
+managed resource is any resource that is allocated and managed by the Common Language Runtime (CLR), such as objects created using the new operator or handles to operating system resources obtained using managed code
+
+unmanaged resource, on the other hand, is any resource that is allocated and managed by code that is not part of the CLR, such as memory allocated using unmanaged code or handles to operating system resources obtained using unmanaged code
+
+
+
+25. What's the purpose of Garbage Collector in .NET?
+
+GC automatically manage memory by freeing up memory that is no longer being used by an application. GC is responsible for tracking objects that have been allocated by an application, detecting when an object is no longer being used, and freeing the memory occupied by that object so that it can be reused. GC efficient and minimize the impact on application performance
+
+
+
+LeetCode Question: 15.
