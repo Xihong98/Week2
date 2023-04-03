@@ -1,0 +1,19 @@
+1. Generics can be used to create reusable code that can work with multiple types of data, so we don't need to create separate implementations for each data type
+
+2. List<string> myList = new List<string>();
+
+3. two generic type parameters Dictionary<TKey, TValue>
+
+4. F they can each be different types
+
+5. .Add()
+
+6. .Remove() .RemoveAt()
+
+7. public class Class_Name<T> { }
+
+8. F Generic classes can have multiple generic type parameters
+
+9. T We can use where T :
+
+10. T
